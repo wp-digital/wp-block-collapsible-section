@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "innocode/wp-block-collapsible-section",
+	"title": "Collapsible section",
+	"category": "innocode",
+	"icon": "excerpt-view",
+	"description": "Displays collapsible section with inner blocks",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "innocode-block-collapsible-section",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

@@ -1,0 +1,19 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-innocode-collapsible-section {
+  border: 2px solid #D0EBD7;
+
+  .block-editor-block-list__layout {
+	> *:first-child {
+	  margin-top: 0;
+	}
+
+	> *:last-child {
+	  margin-bottom: 0;
+	}
+  }
+}
