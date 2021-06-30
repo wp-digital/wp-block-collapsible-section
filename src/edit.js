@@ -15,12 +15,15 @@ import { select, dispatch, withSelect } from '@wordpress/data';
 
 import './editor.scss';
 
-const ALLOWED_BLOCKS = [
-	'core/paragraph',
-	'core/heading',
-	'core/separator',
-	'core/spacer'
-];
+const ALLOWED_BLOCKS = applyFilters(
+	'innocode.block-collapsible-section.allowed-blocks',
+	[
+		'core/paragraph',
+		'core/heading',
+		'core/separator',
+		'core/spacer'
+	]
+);
 
 class CollapsibleSection extends Component {
 	initialLoad = true;
