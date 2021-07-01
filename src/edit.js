@@ -9,7 +9,7 @@ import isEqual from 'lodash.isequal';
 import { __ } from '@wordpress/i18n';
 import { applyFilters } from '@wordpress/hooks';
 import { Component } from '@wordpress/element';
-import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, InspectorControls, RichText, useBlockProps } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
 import { select, dispatch, withSelect } from '@wordpress/data';
 
@@ -60,21 +60,15 @@ class CollapsibleSection extends Component {
 		};
 
 		return [
-			<>
-				<InspectorControls key="inspector">
-					<PanelBody title={__('Collapsible Section', 'innocode-block-collapsible-section')}>
-						<TextControl
-							label={__('Title', 'innocode-block-collapsible-section')}
-							type="text"
-							value={title}
-							onChange={onChangeTitle}
-						/>
-					</PanelBody>
-				</InspectorControls>
-			</>,
 			<div className="block-collapsible-section block-collapsible-section--is-opened">
 				<div className="block-collapsible-section__heading">
-					{title}
+					<RichText
+						tagName="h5"
+						value={ title }
+						allowedFormats={ [ 'core/italic' ] }
+						onChange={ ( title ) => setAttributes( { title } ) }
+						placeholder={ __( 'Heading...' ) }
+					/>
 				</div>
 				<div className="block-collapsible-section__content">
 					<InnerBlocks
