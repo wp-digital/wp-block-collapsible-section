@@ -10,7 +10,7 @@ registerBlockType( 'innocode/wp-block-collapsible-section', {
 	attributes: {
 		title: {
 			type: 'string',
-			default: __('Section title', 'innocode-block-collapsible-section'),
+			default: '',
 		},
 		innerBlocks: {
 			type: 'array',
