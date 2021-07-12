@@ -10,6 +10,7 @@
 	},
 	"textdomain": "innocode-block-collapsible-section",
 	"editorScript": "file:./build/index.js",
+	"script": "file:./build/script.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"
 }
