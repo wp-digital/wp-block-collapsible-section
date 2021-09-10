@@ -9,7 +9,7 @@ import isEqual from 'lodash.isequal';
 import { __ } from '@wordpress/i18n';
 import { applyFilters } from '@wordpress/hooks';
 import { Component } from '@wordpress/element';
-import { InnerBlocks, InspectorControls, RichText, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, InspectorControls, RichText } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
 import { select, dispatch, withSelect } from '@wordpress/data';
 
@@ -85,9 +85,7 @@ export default withSelect( ( select, props ) => {
 		innerBlocks: select( 'core/block-editor' ).getBlocks( props.clientId )
 	};
 } ) ( props =>
-	<div { ...useBlockProps( {
-		className: `wp-block-innocode-collapsible-section`,
-	} ) }>
+	<div className={'wp-block-innocode-collapsible-section'}>
 		<CollapsibleSection {...props}/>
 	</div>
 );
