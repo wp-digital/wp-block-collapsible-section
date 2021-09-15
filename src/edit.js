@@ -85,7 +85,7 @@ export default withSelect( ( select, props ) => {
 		innerBlocks: select( 'core/block-editor' ).getBlocks( props.clientId )
 	};
 } ) ( props =>
-	<div {...useBlockProps ({
+	<div {...useBlockProps({
 		className: `wp-block-innocode-collapsible-section`,
 	})}>
 		<CollapsibleSection {...props}/>
