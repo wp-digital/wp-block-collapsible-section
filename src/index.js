@@ -11,10 +11,6 @@ registerBlockType( 'innocode/wp-block-collapsible-section', {
 		title: {
 			type: 'string',
 			default: '',
-		},
-		innerBlocks: {
-			type: 'array',
-			default: []
 		}
 	},
 
