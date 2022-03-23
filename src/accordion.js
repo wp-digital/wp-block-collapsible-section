@@ -1,7 +1,9 @@
 export default () => {
-  var $accordionHeading = jQuery('.block-collapsible-section__heading');
+  const accordionHeadings = document.querySelectorAll('.block-collapsible-section__heading');
 
-  $accordionHeading.on('click', function(e){
-    jQuery(e.target).closest('.wp-block-innocode-collapsible-section').toggleClass('is-opened')
+  accordionHeadings.forEach((heading) => {
+    heading.addEventListener('click', (e) => {
+      e.currentTarget.closest('.wp-block-innocode-collapsible-section').classList.toggle('is-opened');
+    });
   });
 };
